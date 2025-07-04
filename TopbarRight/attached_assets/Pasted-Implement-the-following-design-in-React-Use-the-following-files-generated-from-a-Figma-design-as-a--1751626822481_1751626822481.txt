@@ -1,0 +1,100 @@
+Implement the following design in React. Use the following files generated from a Figma design as a specification and guide:
+
+```src/styles/SearchOrAskAi.module.css
+.SearchOrAskAi_1_318,
+.Layers_1_319 {
+  flex-shrink: 0;
+  width: 191.512px;
+  height: 41.738px;
+}
+.SearchOrAskAi_1_322 {
+  color: #343434;
+  letter-spacing: -0.185px;
+  flex-shrink: 0;
+  width: 137.045px;
+  height: 18.399px;
+  font-family: Aeonik Pro;
+  font-size: 18.531px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 106%;
+  display: inline-block;
+}
+.SparkleMagnifyingglass_1_1_323 {
+  flex-shrink: 0;
+  width: 22.374px;
+  height: 22.1946px;
+  overflow: hidden;
+}
+.Group_1_324 {
+  flex-shrink: 0;
+  width: 15.898px;
+  height: 15.771px;
+}
+
+```
+
+---
+
+```src/components/assets/Layers.tsx
+import React from 'react';
+export default function Layers() {
+  return <svg width="193" height="42" viewBox="0 0 193 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1_319)">
+<rect x="0.809631" width="191.512" height="41.7377" rx="20.8689" fill="white" fillOpacity="0.25" shape-rendering="crispEdges"/>
+<rect x="1.32258" y="0.512948" width="190.486" height="40.7118" rx="20.3559" stroke="#828282" stroke-opacity="0.15" strokeWidth="1.0259" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_1_319" x="-25.275" y="-26.0847" width="243.681" height="93.907" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="0.988056" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1_319"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="12.5483"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_319"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_319" result="shape"/>
+</filter>
+</defs>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Group.tsx
+import React from 'react';
+export default function Group() {
+  return <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.987061 6.63835C0.987061 10.2223 3.90398 13.1344 7.50062 13.1344C8.7472 13.1344 9.9024 12.7697 10.8778 12.1526L14.2397 15.5055C14.5079 15.7791 14.8767 15.9098 15.2546 15.9098C16.0655 15.9098 16.6598 15.2897 16.6598 14.4963C16.6598 14.1224 16.5288 13.7728 16.2575 13.4992L12.926 10.1645C13.6118 9.16444 14.0172 7.94852 14.0172 6.63835C14.0172 3.05132 11.0972 0.1422 7.50062 0.1422C3.90398 0.1422 0.987061 3.05132 0.987061 6.63835ZM2.8951 6.63835C2.8951 4.10615 4.96163 2.04514 7.50062 2.04514C10.0426 2.04514 12.103 4.10615 12.103 6.63835C12.103 9.16749 10.0426 11.2285 7.50062 11.2285C4.96163 11.2285 2.8951 9.16749 2.8951 6.63835ZM7.50062 9.76328C7.653 9.76328 7.75968 9.65078 7.7932 9.50491C8.12241 7.49555 8.3266 7.19155 10.3626 6.92709C10.5272 6.90281 10.6339 6.78726 10.6339 6.63224C10.6339 6.48327 10.5242 6.37687 10.3626 6.34954C8.35101 6.079 8.10412 5.76894 7.7932 3.7748C7.76579 3.62281 7.64688 3.51338 7.50062 3.51338C7.34819 3.51338 7.2415 3.62281 7.21104 3.7748C6.87882 5.77805 6.68069 6.07292 4.63855 6.34954C4.4831 6.37687 4.37032 6.48327 4.37032 6.63224C4.37032 6.78726 4.48005 6.89976 4.63245 6.92709C6.6746 7.15507 6.9032 7.5047 7.21104 9.50186C7.23845 9.64779 7.34819 9.76328 7.50062 9.76328Z" fill="#343434"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/SearchOrAskAi.tsx
+import React from 'react';
+import styles from '../styles/SearchOrAskAi.module.css';
+import Layers from './assets/Layers';
+import Group from './assets/Group';
+
+export default function SearchOrAskAi() {
+  return (
+    <div className={styles.SearchOrAskAi_1_318}>
+      <div className={styles.Layers_1_319}>
+        <Layers />
+      </div><span className={styles.SearchOrAskAi_1_322}>Search or ask AI</span>
+      <div className={styles.SparkleMagnifyingglass_1_1_323}>
+        <div className={styles.Group_1_324}>
+          <Group />
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+

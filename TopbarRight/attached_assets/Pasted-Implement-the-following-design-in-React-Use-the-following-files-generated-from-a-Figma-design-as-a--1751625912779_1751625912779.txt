@@ -1,0 +1,100 @@
+Implement the following design in React. Use the following files generated from a Figma design as a specification and guide:
+
+```src/styles/Results.module.css
+.Results_1_280,
+.Layers_1_281 {
+  flex-shrink: 0;
+  width: 104.92px;
+  height: 38.18px;
+}
+.ChartPie_1_1_284 {
+  flex-shrink: 0;
+  width: 18.048px;
+  height: 17px;
+  overflow: hidden;
+}
+.Group_1_285 {
+  flex-shrink: 0;
+  width: 18.048px;
+  height: 17px;
+}
+.Results_1_288 {
+  color: #343434;
+  letter-spacing: -0.162px;
+  flex-shrink: 0;
+  width: 59.158px;
+  height: 17px;
+  font-family: Aeonik Pro;
+  font-size: 16.223px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 106%;
+  display: inline-block;
+}
+
+```
+
+---
+
+```src/components/assets/Layers.tsx
+import React from 'react';
+export default function Layers() {
+  return <svg width="106" height="39" viewBox="0 0 106 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1_281)">
+<rect x="0.816895" width="104.92" height="38.1798" rx="19.0899" fill="white" fillOpacity="0.25" shape-rendering="crispEdges"/>
+<rect x="1.32984" y="0.512948" width="103.895" height="37.1539" rx="18.5769" stroke="#828282" stroke-opacity="0.15" strokeWidth="1.0259" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_1_281" x="-25.2678" y="-26.0847" width="157.09" height="90.3491" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="0.988056" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1_281"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="12.5483"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_281"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_281" result="shape"/>
+</filter>
+</defs>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Group.tsx
+import React from 'react';
+export default function Group() {
+  return <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0056 14.174L15.1776 13.1375L10.7175 8.95369L16.366 5.87249L15.577 4.58394L10.0803 7.57692V1.49018H8.52208V8.72367C8.52208 8.99775 8.60464 9.15215 8.78286 9.31914L14.0056 14.174ZM9.39365 16.9905C14.3093 16.9905 18.2973 13.1848 18.2973 8.49681C18.2973 3.80578 14.3093 0 9.39365 0C4.47797 0 0.493286 3.80578 0.493286 8.49681C0.493286 13.1848 4.47797 16.9905 9.39365 16.9905ZM9.39365 15.0845C5.57731 15.0845 2.49058 12.1388 2.49058 8.49681C2.49058 4.85488 5.57731 1.90604 9.39365 1.90604C13.21 1.90604 16.2967 4.85488 16.2967 8.49681C16.2967 12.1388 13.21 15.0845 9.39365 15.0845Z" fill="#343434"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/Results.tsx
+import React from 'react';
+import styles from '../styles/Results.module.css';
+import Layers from './assets/Layers';
+import Group from './assets/Group';
+
+export default function Results() {
+  return (
+    <div className={styles.Results_1_280}>
+      <div className={styles.Layers_1_281}>
+        <Layers />
+      </div>
+      <div className={styles.ChartPie_1_1_284}>
+        <div className={styles.Group_1_285}>
+          <Group />
+        </div>
+      </div><span className={styles.Results_1_288}>Results</span>
+    </div>
+  );
+}
+```
+
